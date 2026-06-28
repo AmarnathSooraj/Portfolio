@@ -1,0 +1,32 @@
+AMARNATH
+========
+Developer & Creator
+
+Contact
+-------
+Email: amarnath@example.com
+GitHub: https://github.com/amarnath
+LinkedIn: https://linkedin.com/in/amarnath
+
+Experience
+----------
+Senior Software Engineer  |  Tech Corp  |  2022 - Present
+  Building scalable microservices & APIs
+
+Full Stack Developer  |  StartupXYZ  |  2020 - 2022
+  Developed customer-facing web applications
+
+Junior Developer  |  WebAgency  |  2018 - 2020
+  Built responsive websites & CMS platforms
+
+Education
+---------
+B.Tech in Computer Science  |  University of Technology  |  2014 - 2018
+  Graduated with honors
+
+Skills
+------
+Languages: TypeScript, JavaScript, Python, Go, Rust, SQL
+Frontend: React, Next.js, Tailwind CSS
+Backend: Node.js, Express, PostgreSQL, MongoDB, Redis
+Tools: Git, Docker, Kubernetes, Linux
