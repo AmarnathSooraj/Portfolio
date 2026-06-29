@@ -15,7 +15,7 @@ export default function ContactForm() {
     return () => { mountedRef.current = false; };
   }, []);
 
-  const TARGET_PHONE = "8075595509";
+  const TARGET_PHONE = "918075595509";
 
   const handleSend = () => {
     if (!name.trim() || !phone.trim() || !message.trim()) return;

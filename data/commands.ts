@@ -6,6 +6,7 @@ export const COMMAND_HELP: Record<string, string> = {
   about: "About me",
   education: "Education",
   contact: "Contact information",
+  github: "Show GitHub contributions",
   whoami: "Display current user",
   date: "Show current date & time",
   clear: "Clear terminal",
@@ -26,8 +27,9 @@ export const COMMANDS: Record<string, string | string[]> = {
   whoami: "amarnath",
   education: EDUCATION,
   contact: [],
+  github: [],
   date: [],
   clear: [],
-  ls: ["about/", "education/", "contact/"],
+  ls: ["about/", "education/", "contact/", "github/"],
   banner: ASCII_LOGO,
 };

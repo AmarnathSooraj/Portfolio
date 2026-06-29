@@ -6,6 +6,7 @@ import { COMMANDS } from "@/data/commands";
 import { TERMINAL_CONFIG } from "@/data/config";
 import type { Line } from "@/data/types";
 import ContactForm from "./ContactForm";
+import GithubContributions from "./GithubContributions";
 
 type HistoryEntry = {
   command: string;
@@ -34,6 +35,10 @@ function processCommand(input: string): Line[] {
     return [{ text: "", type: "form" }];
   }
 
+  if (cmd === "github") {
+    return [{ text: "", type: "github" }];
+  }
+
   const output = COMMANDS[cmd];
   if (!output) {
     return [
@@ -57,9 +62,10 @@ export default function Terminal() {
   const [bootDone, setBootDone] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const terminalRef = useRef<HTMLDivElement>(null);
-  const [currentDate, setCurrentDate] = useState(new Date().toLocaleString());
+  const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
+    setCurrentDate(new Date().toLocaleString());
     const timer = setInterval(() => {
       setCurrentDate(new Date().toLocaleString());
     }, 60000);
@@ -180,7 +186,7 @@ export default function Terminal() {
           style={{ fontFamily: "var(--font-terminal)" }}
         >
           <a
-            href="https://github.com/amarnath"
+            href="https://github.com/AmarnathSooraj"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#ff69b4] hover:text-white transition-colors"
@@ -191,7 +197,7 @@ export default function Terminal() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/amarnath"
+            href="https://linkedin.com/in/amarnathps"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#ff69b4] hover:text-white transition-colors"
@@ -202,7 +208,7 @@ export default function Terminal() {
             </svg>
           </a>
           <a
-            href="https://instagram.com/amarnath"
+            href="https://instagram.com/amarnathsooraj"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[#ff69b4] hover:text-white transition-colors"
@@ -269,6 +275,8 @@ export default function Terminal() {
             {entry.output.map((line, j) => (
               line.type === "form" ? (
                 <ContactForm key={`form-${i}-${j}`} />
+              ) : line.type === "github" ? (
+                <GithubContributions key={`github-${i}-${j}`} />
               ) : (
               <div
                 key={`out-${i}-${j}`}
